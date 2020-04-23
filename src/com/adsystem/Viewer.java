@@ -3,14 +3,24 @@ package com.adsystem;
 import javafx.util.Pair;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Viewer {
     private String name;
-    private String birthDay;
+    private Date birthDay;
     private ArrayList<Pair<Interest, Integer>> interests;
     private Gender gender;
     private Country country;
     private City city;
+
+    public Viewer(String name, Date birthDay, ArrayList<Pair<Interest, Integer>> interests, Gender gender, Country country, City city) {
+        this.name = name;
+        this.birthDay = birthDay;
+        this.interests = interests;
+        this.gender = gender;
+        this.country = country;
+        this.city = city;
+    }
 
     public String getName() {
         return name;
@@ -20,11 +30,11 @@ public class Viewer {
         this.name = name;
     }
 
-    public String getBirthDay() {
+    public Date getBirthDay() {
         return birthDay;
     }
 
-    public void setBirthDay(String birthDay) {
+    public void setBirthDay(Date birthDay) {
         this.birthDay = birthDay;
     }
 

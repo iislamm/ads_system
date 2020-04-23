@@ -13,6 +13,17 @@ public class Advertisement {
     private int reachLimit;
     private float cost;
 
+
+    public Advertisement(ArrayList<Interest> targetInterests, ArrayList<Gender> targetGender, Pair<Integer, Integer> targetAge, ArrayList<Country> targetCountries, ArrayList<City> targetCity, int reachLimit, float cost) {
+        this.targetInterests = targetInterests;
+        this.targetGender = targetGender;
+        this.targetAge = targetAge;
+        this.targetCountries = targetCountries;
+        this.targetCity = targetCity;
+        this.reachLimit = reachLimit;
+        this.cost = cost;
+    }
+
     public ArrayList<Interest> getTargetInterests() {
         return targetInterests;
     }
