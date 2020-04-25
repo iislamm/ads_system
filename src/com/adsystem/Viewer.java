@@ -23,6 +23,7 @@ public class Viewer {
         this.gender = gender;
         this.country = country;
         this.city = city;
+        this.seenAds = new ArrayList<>();
     }
 
     public String getName() {

@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.Date;
 
 public class Feed {
-    private Viewer currentUser;
+    public Viewer currentUser;
     private ArrayList<Advertisement> ads;
     private ArrayList<Pair<Advertisement, Float>> currentAds;
     Feed() {
@@ -20,6 +20,7 @@ public class Feed {
     }
 
     public void matchViewerAds() {
+        currentAds = new ArrayList<>();
         boolean addAd;
         for (Advertisement ad: ads) {
             addAd = false;
@@ -100,7 +101,7 @@ public class Feed {
         var viewerInterests = this.currentUser.getInterests();
         for (var vi: viewerInterests) {
             for (var ad : this.currentUser.getSeenAdds()){
-                if (ad.getKey().getTargetInterests().contains(vi)){
+                if (ad.getKey().getTargetInterests().contains(vi.getKey())){
                     if (ad.getValue()){
                         vi.setValue(vi.getValue() + 1);
                     }else{
@@ -109,5 +110,21 @@ public class Feed {
                 }
             }
         }
+    }
+
+    public void test(){
+
+        int index = 0;
+        for (var ad : this.getCurrentAds()){
+            if(index < 3){
+                adFeedback(ad.getKey() , false);
+            } else if (index > 2 && index < 5){
+                adFeedback(ad.getKey() , true);
+            }else
+                break;
+            index++;
+        }
+        resortAds();
+        matchViewerAds();
     }
 }
