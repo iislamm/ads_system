@@ -6,6 +6,9 @@ public class Main {
 	// write your code here
         Feed f = new Feed();
         f.matchViewerAds();
-        System.out.println(f.getCurrentAds().get(0).getTargetInterests());
+        for (var ad: f.getCurrentAds()) {
+            System.out.print(ad.getKey().getTargetInterests());
+            System.out.println("\t" + ad.getValue());
+        }
     }
 }

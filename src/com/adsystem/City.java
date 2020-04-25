@@ -2,5 +2,13 @@ package com.adsystem;
 
 public enum City {
     Cairo,
-    Alexandria
+    Alexandria,
+    Giza,
+    Assuit,
+    Sohag,
+    Hurghada,
+    SharmAlShaikh,
+    Aswan,
+    Luxor
+
 }

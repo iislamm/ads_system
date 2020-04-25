@@ -4,5 +4,14 @@ public enum Interest {
     Sports,
     Health,
     Tech,
-    Travel
+    Travel,
+    Religon,
+    Events,
+    SocialLife,
+    Poem,
+    Literature,
+    Beauty,
+    Makeup,
+    Art,
+    Animie,
 }

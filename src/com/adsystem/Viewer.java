@@ -12,6 +12,7 @@ public class Viewer {
     private Gender gender;
     private Country country;
     private City city;
+    private ArrayList<Pair<Advertisement, Boolean>> seenAds;
 
     public Viewer(String name, Date birthDay, ArrayList<Pair<Interest, Integer>> interests, Gender gender, Country country, City city) {
         this.name = name;
@@ -68,5 +69,9 @@ public class Viewer {
 
     public void setCity(City city) {
         this.city = city;
+    }
+
+    public void addSeenAdd(Advertisement ad, boolean action) {
+        this.seenAds.add(new Pair(ad, action));
     }
 }
