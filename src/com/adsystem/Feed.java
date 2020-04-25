@@ -4,6 +4,7 @@ import javafx.util.Pair;
 
 import javax.xml.crypto.Data;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 
 public class Feed {
@@ -43,13 +44,37 @@ public class Feed {
 
     public void addSorted(Advertisement ad , float rate) {
         this.currentAds.add(new Pair(ad, rate));
-        this.sortAds(0, 0);
+        Pair<Advertisement, Float>[] arr_ads = this.currentAds.toArray(new Pair[0]);
+        this.sortAds(arr_ads, 0, arr_ads.length - 1);
+        this.currentAds = new ArrayList<>(Arrays.asList(arr_ads));
     }
 
-    private void sortAds(int low, int high) { // quick sort
+    private void sortAds(Pair<Advertisement, Float>[] ads, int low, int high) { // quick sort
         if (low < high) {
-
+            int pi = partition(ads, low, high);
+            sortAds(ads, low, pi-1);
+            sortAds(ads, pi+1, high);
         }
+    }
+
+    private int partition(Pair<Advertisement, Float>[] ads, int low, int high) {
+        float pivot = ads[high].getValue();
+        int i = low - 1;
+        for (int j = low; j < high; j++) {
+            if (ads[j].getValue() > pivot) {
+                i++;
+
+                var temp = ads[i];
+                ads[i] = ads[j];
+                ads[j] = temp;
+            }
+        }
+
+        var temp = ads[i+1];
+        ads[i+1] = ads[high];
+        ads[high] = temp;
+
+        return i+1;
     }
 
     private void rateAd(Advertisement ad) {
