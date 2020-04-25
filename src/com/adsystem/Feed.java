@@ -1,15 +1,13 @@
 package com.adsystem;
 
-//import javafx.util.Pair;
-
 import com.adsystem.customtypes.Pair;
-
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 
 public class Feed {
-    private final Viewer currentUser;
-    private final ArrayList<Advertisement> ads;
+    private Viewer currentUser;
+    private ArrayList<Advertisement> ads;
     private ArrayList<Pair<Advertisement, Float>> currentAds;
     Feed() {
         currentAds = new ArrayList<>();
@@ -96,5 +94,20 @@ public class Feed {
 
     public void adFeedback(Advertisement ad, boolean action) {
         this.currentUser.addSeenAdd(ad, action);
+    }
+
+    public void resortAds(){
+        var viewerInterests = this.currentUser.getInterests();
+        for (var vi: viewerInterests) {
+            for (var ad : this.currentUser.getSeenAdds()){
+                if (ad.getKey().getTargetInterests().contains(vi)){
+                    if (ad.getValue()){
+                        vi.setValue(vi.getValue() + 1);
+                    }else{
+                        vi.setValue(vi.getValue() - 1);
+                    }
+                }
+            }
+        }
     }
 }

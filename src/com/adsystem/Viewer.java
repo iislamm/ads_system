@@ -76,4 +76,6 @@ public class Viewer {
     public void addSeenAdd(Advertisement ad, boolean action) {
         this.seenAds.add(new Pair(ad, action));
     }
+
+    public ArrayList<Pair<Advertisement, Boolean>> getSeenAdds() {return this.seenAds;}
 }
