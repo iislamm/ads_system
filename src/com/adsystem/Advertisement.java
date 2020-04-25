@@ -1,6 +1,8 @@
 package com.adsystem;
 
-import javafx.util.Pair;
+//import javafx.util.Pair;
+
+import com.adsystem.customtypes.Pair;
 
 import java.util.ArrayList;
 

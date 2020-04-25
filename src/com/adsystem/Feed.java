@@ -1,15 +1,15 @@
 package com.adsystem;
 
-import javafx.util.Pair;
+//import javafx.util.Pair;
 
-import javax.xml.crypto.Data;
+import com.adsystem.customtypes.Pair;
+
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Date;
 
 public class Feed {
-    private Viewer currentUser;
-    private ArrayList<Advertisement> ads;
+    private final Viewer currentUser;
+    private final ArrayList<Advertisement> ads;
     private ArrayList<Pair<Advertisement, Float>> currentAds;
     Feed() {
         currentAds = new ArrayList<>();
