@@ -6,24 +6,33 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Feed {
+    private static Feed uniqueInstance;
     private final ArrayList<Advertisement> ads;
     public Viewer currentUser;
     private ArrayList<Pair<Advertisement, Float>> currentAds;
 
-    Feed() {
+    private Feed() {
         currentAds = new ArrayList<>();
         currentUser = DataGenerator.generateViewer();
         ads = DataGenerator.get_ads_from_file();
     }
 
+    public static Feed getInstance() {
+        if (uniqueInstance == null) {
+            uniqueInstance = new Feed();
+        }
+        return uniqueInstance;
+    }
+
     public ArrayList<Pair<Advertisement, Float>> getCurrentAds() {
+        this.matchViewerAds();
         return currentAds;
     }
 
     /*
      * This function retrieves the most relevant advertisements to the user
      * This function implements the greedy algorithm
-     * The analysis of the function is: TODO
+     * The analysis of the function at worst case is: O(n * m);
      */
     public void matchViewerAds() {
         currentAds = new ArrayList<>();
@@ -60,7 +69,7 @@ public class Feed {
     /*
      * This function sorts the advertisements according to the relevancy to the user
      * This function implements the divide and conquer paradigm using quick sort algorithm
-     * The analysis of the function is: TODO
+     * The analysis of the function at worst case is: O(n^2)
      */
     private void sortAds(Pair<Advertisement, Float>[] ads, int low, int high) { // quick sort
         if (low < high) {
@@ -96,6 +105,7 @@ public class Feed {
     /*
      * The function rates the relevancy of the ad to the user
      * This function implements transfer and conquer paradigm
+     * The analysis of the function at worst case is: O(n * m)
      */
     private void rateAd(Advertisement ad) {
         var viewerInterests = this.currentUser.getInterests();
@@ -121,6 +131,8 @@ public class Feed {
 
     /*
      * This function updates the interests ratings of the user based on his or her recent feedback on the seen ads
+     * This function implements the greedy algorithm
+     * The analysis of the function at worst case is: O(m * k);
      */
     public void updateViewerInterestsRating() {
         var viewerInterests = this.currentUser.getInterests();
@@ -130,27 +142,10 @@ public class Feed {
                     if (ad.getValue()) {
                         vi.setValue(vi.getValue() + 1);
                     } else {
-                        vi.setValue(vi.getValue() - 1);
+                        vi.setValue(Math.max(vi.getValue() - 1, 0));
                     }
                 }
             }
         }
-    }
-
-    public void test() {
-
-        int index = 0;
-        for (var ad : this.getCurrentAds()) {
-            if (index < 3) {
-                adFeedback(ad.getKey(), false);
-            } else if (index > 2 && index < 5) {
-                adFeedback(ad.getKey(), true);
-            } else {
-                break;
-            }
-            index++;
-        }
-        updateViewerInterestsRating();
-        matchViewerAds();
     }
 }

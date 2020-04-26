@@ -15,102 +15,48 @@ public class DataGenerator {
         targetInterests.add(Interest.Health);
         targetInterests.add(Interest.Travel);
         targetInterests.add(Interest.Sports);
-        ArrayList<Gender> targetGenders = new ArrayList<>();
-        targetGenders.add(Gender.Male);
-        ArrayList<Country> targetCountries = new ArrayList<Country>();
-        targetCountries.add(Country.Egypt);
-        ArrayList<City> targetCities = new ArrayList<City>();
-        targetCities.add(City.Cairo);
-        ad = new Advertisement(targetInterests, targetGenders, new Pair<>(33, 50), targetCountries, targetCities, 5, 0);
+        ad = new Advertisement(targetInterests);
         allAds.add(ad);
 
         targetInterests = new ArrayList<>();
         targetInterests.add(Interest.Tech);
-        targetGenders = new ArrayList<>();
-        targetGenders.add(Gender.Male);
-        targetCountries = new ArrayList<Country>();
-        targetCountries.add(Country.Egypt);
-        targetCities = new ArrayList<City>();
-        targetCities.add(City.Cairo);
-        ad = new Advertisement(targetInterests, targetGenders, new Pair<>(33, 50), targetCountries, targetCities, 5, 0);
+        ad = new Advertisement(targetInterests);
         allAds.add(ad);
 
         targetInterests = new ArrayList<>();
         targetInterests.add(Interest.Tech);
         targetInterests.add(Interest.Religon);
-        targetGenders = new ArrayList<>();
-        targetGenders.add(Gender.Female);
-        targetCountries = new ArrayList<Country>();
-        targetCountries.add(Country.Egypt);
-        targetCities = new ArrayList<City>();
-        targetCities.add(City.Alexandria);
-        ad = new Advertisement(targetInterests, targetGenders, new Pair<>(20, 30), targetCountries, targetCities, 5, 0);
+        ad = new Advertisement(targetInterests);
         allAds.add(ad);
 
         targetInterests = new ArrayList<>();
         targetInterests.add(Interest.Health);
         targetInterests.add(Interest.SocialLife);
-        targetGenders = new ArrayList<>();
-        targetGenders.add(Gender.Male);
-        targetCountries = new ArrayList<Country>();
-        targetCountries.add(Country.Egypt);
-        targetCities = new ArrayList<City>();
-        targetCities.add(City.Alexandria);
-        ad = new Advertisement(targetInterests, targetGenders, new Pair<>(18, 35), targetCountries, targetCities, 10, 0);
+        ad = new Advertisement(targetInterests);
         allAds.add(ad);
 
         targetInterests = new ArrayList<>();
         targetInterests.add(Interest.Poem);
         targetInterests.add(Interest.Sports);
-        targetGenders = new ArrayList<>();
-        targetGenders.add(Gender.Female);
-        targetCountries = new ArrayList<Country>();
-        targetCountries.add(Country.Egypt);
-        targetCities = new ArrayList<City>();
-        targetCities.add(City.Cairo);
-        ad = new Advertisement(targetInterests, targetGenders, new Pair<>(30, 40), targetCountries, targetCities, 10, 0);
+        ad = new Advertisement(targetInterests);
         allAds.add(ad);
 
         targetInterests = new ArrayList<>();
         targetInterests.add(Interest.Events);
-        
-        targetGenders = new ArrayList<>();
-        targetGenders.add(Gender.Male);
-        targetCountries = new ArrayList<Country>();
-        targetCountries.add(Country.Egypt);
-        targetCities = new ArrayList<City>();
-        targetCities.add(City.Cairo);
-        targetCities.add(City.Giza);
-        ad = new Advertisement(targetInterests, targetGenders, new Pair<>(18, 30), targetCountries, targetCities, 10, 0);
+
+        ad = new Advertisement(targetInterests);
         allAds.add(ad);
 
         targetInterests = new ArrayList<>();
         targetInterests.add(Interest.Events);
         targetInterests.add(Interest.Sports);
-        targetGenders = new ArrayList<>();
-        targetGenders.add(Gender.Male);
-        targetGenders.add(Gender.Female);
-        targetCountries = new ArrayList<Country>();
-        targetCountries.add(Country.Egypt);
-        targetCities = new ArrayList<City>();
-        targetCities.add(City.Luxor);
-        targetCities.add(City.Aswan);
-        ad = new Advertisement(targetInterests, targetGenders, new Pair<>(20, 40), targetCountries, targetCities, 10, 0);
+        ad = new Advertisement(targetInterests);
         allAds.add(ad);
 
         targetInterests = new ArrayList<>();
         targetInterests.add(Interest.Literature);
         targetInterests.add(Interest.Poem);
-        targetGenders = new ArrayList<>();
-        targetGenders.add(Gender.Male);
-        targetCountries = new ArrayList<Country>();
-        targetCountries.add(Country.Egypt);
-        targetCities = new ArrayList<City>();
-        targetCities.add(City.Hurghada);
-        targetCities.add(City.Cairo);
-        targetCities.add(City.Giza);
-        targetCities.add(City.SharmAlShaikh);
-        ad = new Advertisement(targetInterests, targetGenders, new Pair<>(35, 60), targetCountries, targetCities, 10, 0);
+        ad = new Advertisement(targetInterests);
         allAds.add(ad);
 
         targetInterests = new ArrayList<>();
@@ -118,162 +64,74 @@ public class DataGenerator {
         targetInterests.add(Interest.Sports);
         targetInterests.add(Interest.Events);
         targetInterests.add(Interest.SocialLife);
-        targetGenders = new ArrayList<>();
-        targetGenders.add(Gender.Male);
-        targetGenders.add(Gender.Female);
-        targetCountries = new ArrayList<Country>();
-        targetCountries.add(Country.Egypt);
-        targetCities = new ArrayList<City>();
-        targetCities.add(City.Cairo);
-        targetCities.add(City.Giza);
-        ad = new Advertisement(targetInterests, targetGenders, new Pair<>(18, 40), targetCountries, targetCities, 10, 0);
+        ad = new Advertisement(targetInterests);
         allAds.add(ad);
 
         targetInterests = new ArrayList<>();
         targetInterests.add(Interest.Events);
         targetInterests.add(Interest.Tech);
-        targetGenders = new ArrayList<>();
-        targetGenders.add(Gender.Male);
-        targetCountries = new ArrayList<Country>();
-        targetCountries.add(Country.Egypt);
-        targetCities = new ArrayList<City>();
-        targetCities.add(City.Assuit);
-        targetCities.add(City.Sohag);
-        ad = new Advertisement(targetInterests, targetGenders, new Pair<>(18, 35), targetCountries, targetCities, 10, 0);
+        ad = new Advertisement(targetInterests);
         allAds.add(ad);
 
         targetInterests = new ArrayList<>();
         targetInterests.add(Interest.Health);
         targetInterests.add(Interest.Sports);
-        targetGenders = new ArrayList<>();
-        targetGenders.add(Gender.Male);
-        targetCountries = new ArrayList<Country>();
-        targetCountries.add(Country.Egypt);
-        targetCities = new ArrayList<City>();
-        targetCities.add(City.Cairo);
-        ad = new Advertisement(targetInterests, targetGenders, new Pair<>(18, 60), targetCountries, targetCities, 10, 0);
+        ad = new Advertisement(targetInterests);
         allAds.add(ad);
 
         targetInterests = new ArrayList<>();
         targetInterests.add(Interest.Travel);
         targetInterests.add(Interest.Sports);
-        targetGenders = new ArrayList<>();
-        targetGenders.add(Gender.Male);
-        targetGenders.add(Gender.Female);
-        targetCountries = new ArrayList<Country>();
-        targetCountries.add(Country.Egypt);
-        targetCities = new ArrayList<City>();
-        targetCities.add(City.Cairo);
-         targetCities.add(City.Giza);
-        ad = new Advertisement(targetInterests, targetGenders, new Pair<>(20, 40), targetCountries, targetCities, 10, 0);
+        ad = new Advertisement(targetInterests);
         allAds.add(ad);
 
         targetInterests = new ArrayList<>();
         targetInterests.add(Interest.Religon);
-        targetGenders = new ArrayList<>();
-        targetGenders.add(Gender.Male);
-        targetGenders.add(Gender.Female);
-        targetCountries = new ArrayList<Country>();
-        targetCountries.add(Country.Egypt);
-        targetCities = new ArrayList<City>();
-        targetCities.add(City.Alexandria);
-        ad = new Advertisement(targetInterests, targetGenders, new Pair<>(18, 60), targetCountries, targetCities, 10, 0);
+        ad = new Advertisement(targetInterests);
         allAds.add(ad);
 
         targetInterests = new ArrayList<>();
         targetInterests.add(Interest.Beauty);
         targetInterests.add(Interest.Makeup);
-        targetGenders = new ArrayList<>();
-        targetGenders.add(Gender.Female);
-        targetCountries = new ArrayList<Country>();
-        targetCountries.add(Country.Egypt);
-        targetCities = new ArrayList<City>();
-        targetCities.add(City.Cairo);
-        ad = new Advertisement(targetInterests, targetGenders, new Pair<>(15, 30), targetCountries, targetCities, 10, 0);
+        ad = new Advertisement(targetInterests);
         allAds.add(ad);
 
         targetInterests = new ArrayList<>();
         targetInterests.add(Interest.Art);
         targetInterests.add(Interest.Animie);
         targetInterests.add(Interest.Events);
-        targetGenders = new ArrayList<>();
-        targetGenders.add(Gender.Male);
-        targetGenders.add(Gender.Female);
-        targetCountries = new ArrayList<Country>();
-        targetCountries.add(Country.Egypt);
-        targetCities = new ArrayList<City>();
-        targetCities.add(City.Cairo);
-        targetCities.add(City.Giza);
-        ad = new Advertisement(targetInterests, targetGenders, new Pair<>(8, 16), targetCountries, targetCities, 10, 0);
+        ad = new Advertisement(targetInterests);
         allAds.add(ad);
 
         targetInterests = new ArrayList<>();
         targetInterests.add(Interest.Health);
         targetInterests.add(Interest.Events);
-        targetGenders = new ArrayList<>();
-        targetGenders.add(Gender.Male);
-        targetCountries = new ArrayList<Country>();
-        targetCountries.add(Country.Egypt);
-        targetCities = new ArrayList<City>();
-        targetCities.add(City.Cairo);
-        ad = new Advertisement(targetInterests, targetGenders, new Pair<>(21, 40), targetCountries, targetCities, 10, 0);
+        ad = new Advertisement(targetInterests);
         allAds.add(ad);
 
         targetInterests = new ArrayList<>();
         targetInterests.add(Interest.Sports);
         targetInterests.add(Interest.Animie);
-        targetGenders = new ArrayList<>();
-        targetGenders.add(Gender.Male);
-        targetCountries = new ArrayList<Country>();
-        targetCountries.add(Country.Egypt);
-        targetCities = new ArrayList<City>();
-        targetCities.add(City.Cairo);
-        targetCities.add(City.Giza);
-        targetCities.add(City.SharmAlShaikh);
-        targetCities.add(City.Hurghada);
-        ad = new Advertisement(targetInterests, targetGenders, new Pair<>(20, 30), targetCountries, targetCities, 10, 0);
+        ad = new Advertisement(targetInterests);
         allAds.add(ad);
 
         targetInterests = new ArrayList<>();
         targetInterests.add(Interest.Animie);
         targetInterests.add(Interest.Tech);
-        targetGenders = new ArrayList<>();
-        targetGenders.add(Gender.Male);
-        targetGenders.add(Gender.Female);
-        targetCountries = new ArrayList<Country>();
-        targetCountries.add(Country.Egypt);
-        targetCities = new ArrayList<City>();
-        targetCities.add(City.Luxor);
-        targetCities.add(City.Aswan);
 
-        ad = new Advertisement(targetInterests, targetGenders, new Pair<>(15, 30), targetCountries, targetCities, 10, 0);
+        ad = new Advertisement(targetInterests);
         allAds.add(ad);
 
         targetInterests = new ArrayList<>();
         targetInterests.add(Interest.Art);
         targetInterests.add(Interest.Events);
-        targetGenders = new ArrayList<>();
-        targetGenders.add(Gender.Male);
-        targetCountries = new ArrayList<Country>();
-        targetCountries.add(Country.Egypt);
-        targetCities = new ArrayList<City>();
-        targetCities.add(City.Cairo);
-        ad = new Advertisement(targetInterests, targetGenders, new Pair<>(18, 33), targetCountries, targetCities, 10, 0);
+        ad = new Advertisement(targetInterests);
         allAds.add(ad);
 
         targetInterests = new ArrayList<>();
         targetInterests.add(Interest.Art);
         targetInterests.add(Interest.Tech);
-        targetGenders = new ArrayList<>();
-        targetGenders.add(Gender.Male);
-        targetCountries = new ArrayList<Country>();
-        targetCountries.add(Country.Egypt);
-        targetCities = new ArrayList<City>();
-        targetCities.add(City.Cairo);
-        targetCities.add(City.Giza);
-        targetCities.add(City.Aswan);
-        targetCities.add(City.Assuit);
-        ad = new Advertisement(targetInterests, targetGenders, new Pair<>(20, 35), targetCountries, targetCities, 10, 0);
+        ad = new Advertisement(targetInterests);
         allAds.add(ad);
 
         return allAds;
@@ -288,7 +146,7 @@ public class DataGenerator {
         viewerInterests.add(new Pair<>(Interest.SocialLife, 1));
         Date now = new Date();
 
-        Viewer viewer = new Viewer("Islam", now, viewerInterests, Gender.Male, Country.Egypt, City.Cairo);
+        Viewer viewer = new Viewer("Islam", now, viewerInterests);
         return viewer;
     }
 
