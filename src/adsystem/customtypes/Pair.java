@@ -1,6 +1,8 @@
-package com.adsystem.customtypes;
+package adsystem.customtypes;
 
-public class Pair<T1, T2> {
+import java.io.Serializable;
+
+public class Pair<T1, T2> implements Serializable {
     private T1 key;
     private T2 value;
 

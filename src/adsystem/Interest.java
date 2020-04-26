@@ -1,4 +1,4 @@
-package com.adsystem;
+package adsystem;
 
 public enum Interest {
     Sports,

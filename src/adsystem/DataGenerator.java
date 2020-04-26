@@ -1,8 +1,9 @@
-package com.adsystem;
+package adsystem;
 
 //import javafx.util.Pair;
-import com.adsystem.customtypes.Pair;
+import adsystem.customtypes.Pair;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -289,6 +290,41 @@ public class DataGenerator {
 
         Viewer viewer = new Viewer("Islam", now, viewerInterests, Gender.Male, Country.Egypt, City.Cairo);
         return viewer;
+    }
+
+    public static void feedFiles() {
+
+        var ads = DataGenerator.generateAds();
+        DataGenerator.write_to_file(ads, "src/adsystem/data/ads.txt");
+    }
+
+    private static void write_to_file(ArrayList<Advertisement> o, String path) {
+        File file = new File(path);
+        FileOutputStream fileOutputStream = null;
+        try {
+            fileOutputStream = new FileOutputStream(file);
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+            objectOutputStream.writeObject(o);
+            objectOutputStream.close();
+            fileOutputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static ArrayList<Advertisement> get_ads_from_file() {
+        File file = new File("src/adsystem/data/ads.txt");
+        ArrayList<Advertisement> result = null;
+        try {
+            FileInputStream fileInputStream = new FileInputStream(file);
+            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+            result = (ArrayList<Advertisement>) objectInputStream.readObject();
+            objectInputStream.close();
+            fileInputStream.close();
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return result;
     }
 
 

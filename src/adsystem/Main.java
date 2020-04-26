@@ -1,9 +1,10 @@
-package com.adsystem;
-import com.adsystem.customtypes.Pair;
+package adsystem;
+import adsystem.customtypes.Pair;
+
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        DataGenerator.feedFiles();
         Feed f = new Feed();
         f.matchViewerAds();
         for (Pair<Advertisement,Float> ad: f.getCurrentAds()) {

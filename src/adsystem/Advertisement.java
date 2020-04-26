@@ -1,12 +1,13 @@
-package com.adsystem;
+package adsystem;
 
 //import javafx.util.Pair;
 
-import com.adsystem.customtypes.Pair;
+import adsystem.customtypes.Pair;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Advertisement {
+public class Advertisement implements Serializable {
     private ArrayList<Interest> targetInterests;
     private ArrayList<Gender> targetGender;
     private Pair<Integer, Integer> targetAge;

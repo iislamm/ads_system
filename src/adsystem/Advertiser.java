@@ -1,4 +1,4 @@
-package com.adsystem;
+package adsystem;
 
 import java.util.ArrayList;
 

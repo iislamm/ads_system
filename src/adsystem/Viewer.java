@@ -1,8 +1,8 @@
-package com.adsystem;
+package adsystem;
 
 //import javafx.util.Pair;
 
-import com.adsystem.customtypes.Pair;
+import adsystem.customtypes.Pair;
 
 import java.util.ArrayList;
 import java.util.Date;
